@@ -2,12 +2,11 @@ name: Build and Deploy Code
 
 on: [push, pull_request]
 
-permissions:
-  contents: read
-
 jobs:
   job1:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: pulling git repo
         uses: action/checkout@v2

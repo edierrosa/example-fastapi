@@ -12,6 +12,7 @@ jobs:
         uses: action/checkout@v3
         with:
           repository: edierrosa/example-fastapi
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: install python version 3.9
         uses: action/setup-python@v4
         with:

@@ -9,9 +9,9 @@ jobs:
       contents: read
     steps:
       - name: pulling git repo
-        uses: action/checkout@v2
+        uses: action/checkout@v3
       - name: install python version 3.9
-        uses: action/setup-python@v2
+        uses: action/setup-python@v4
         with:
           python-version: "3.9"
       - name: update pip

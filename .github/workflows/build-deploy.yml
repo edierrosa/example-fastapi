@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: pulling git repo
         uses: action/checkout@v3
+        with:
+          fetch-depth: 0
       - name: install python version 3.9
         uses: action/setup-python@v4
         with:

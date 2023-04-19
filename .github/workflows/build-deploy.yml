@@ -67,7 +67,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi:latest
           cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=registry,dest=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
 
       - name: image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
